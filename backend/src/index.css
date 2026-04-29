@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+@theme {
+  --color-hospital-primary: #3b82f6;    /* Bright but soft blue */
+  --color-hospital-accent: #60a5fa;     /* Light blue */
+  --color-hospital-light: #f0f9ff;      /* Very soft sky blue background */
+  --color-hospital-dark: #1e40af;       /* Deep blue for headings */
+  --color-hospital-muted: #e0f2fe;      /* Extra soft blue */
+}
+
+body {
+  background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+/* Calming animations */
+.heartbeat-icon {
+  animation: heartbeat 2.4s infinite ease-in-out;
+}
+
+.card-hover {
+  transition: all 0.4s cubic-bezier(0.4, 0.0, 0.2, 1);
+}
+
+.card-hover:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 25px -5px rgb(59 130 246 / 0.12);
+}
+
+@keyframes heartbeat {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.22); }
+}
